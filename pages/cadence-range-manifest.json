@@ -1,0 +1,27 @@
+{
+    "short_name": "Cadence Range",
+    "name": "Cadence Range",
+    "background_color": "black",
+    "theme_color": "black",
+    "description": "Audio alerts for cadence range",
+    "start_url": "/pages/cadence-range.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [{
+        "src": "/pages/images/icon256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    }, {
+        "src": "/pages/images/icon128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    }, {
+        "src": "/pages/images/icon64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+    }, {
+        "src": "/pages/images/icon32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+    }]
+}

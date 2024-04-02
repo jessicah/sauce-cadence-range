@@ -1,0 +1,20 @@
+{
+    "manifest_version": 1,
+    "name": "Cadence Range",
+    "description": "Audio alerts when cadence drifts out of the target range",
+    "author": "Jessica Hamilton",
+    "website_url": "https://github.com/jessicah/sauce-cadence-range",
+    "version": "1.0.0",
+    "web_root": "pages",
+    "windows": [
+        {
+            "file": "pages/cadence-range.html",
+            "id": "cadence-range",
+            "name": "Cadence Range",
+            "description": "Audio alerts when cadence drifts out of the target range",
+            "always_visible": true,
+            "overlay": true,
+            "frame": false
+        }
+    ]
+}

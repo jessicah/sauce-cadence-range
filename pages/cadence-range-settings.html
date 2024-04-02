@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="settings-page" tabindex="0" data-settings-key="cadence-range-settings-v1">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';"/>
+
+        <title>Cadence Range - Settings</title>
+
+        <script src="/pages/src/preloads.js"></script>
+
+        <link id="favicon" rel="shortcut icon" href="images/favicon.png"/>
+        <link rel="stylesheet" href="./css/common.css"/>
+		<style type="text/css">
+			body {
+				--min-bg-opacity: 0;
+				--bg-opacity: 1;
+				--outline-opacity: 0.4;
+				--final-bg-opacity: max(var(--min-bg-opacity) * 100%, var(--bg-opacity) * 100%);
+				color: hsl(var(--theme-fg-hue) var(--theme-fg-sat) var(--theme-fg-light)/100%);
+				background-image: linear-gradient(135deg, hsl(var(--theme-bg-hue) var(--theme-bg-sat) var(--theme-bg-light)/var(--final-bg-opacity)), hsl(var(--theme-bg2-hue) var(--theme-bg2-sat) var(--theme-bg2-light)/var(--final-bg-opacity)));
+			}
+		</style>
+
+        <script type="module">
+            import {settingsMain} from './src/cadence-limits.mjs';
+            settingsMain();
+        </script>
+    </head>
+    <body>
+        <div id="titlebar">
+            <header>
+                <div class="logo"><img src="images/icon128.png"/></div>
+                <div class="title">Cadence Range - Settings</div>
+                <div class="filler"></div>
+                <div class="buttons">
+                    <div title="Close this window" class="button close electron-only"><ms>close</ms></div>
+                </div>
+            </header>
+        </div>
+        <div id="settings">
+            <form class="section">
+                <label>
+                    <key>Cadence Lower Limit:</key>
+                    <input type="number" min="0" step="1" name="cadenceLow"/>
+                </label>
+				<label>
+                    <key>Cadence Upper Limit:</key>
+                    <input type="number" min="0" step="1" name="cadenceHigh"/>
+                </label>
+            </form>
+        </div>
+    </body>
+</html>

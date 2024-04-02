@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html tabindex="0" data-settings-key="cadence-range-settings-v1" lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta http-equiv="Content-Security-Policy" content="script-src-elem 'self' 'unsafe-inline';" />
+
+	<title>Cadence Limits</title>
+
+	<script src="/pages/src/preloads.js"></script>
+
+	<script type="module">
+		import { main } from './src/cadence-limits.mjs';
+		main();
+	</script>
+
+	<link rel="stylesheet" href="./css/common.css" />
+	<style type="text/css">
+		body {
+			--min-bg-opacity: 0;
+			--bg-opacity: 1;
+			--outline-opacity: 0.4;
+			--final-bg-opacity: max(var(--min-bg-opacity) * 100%, var(--bg-opacity) * 100%);
+			color: hsl(var(--theme-fg-hue) var(--theme-fg-sat) var(--theme-fg-light)/100%);
+			background-image: linear-gradient(135deg, hsl(var(--theme-bg-hue) var(--theme-bg-sat) var(--theme-bg-light)/var(--final-bg-opacity)), hsl(var(--theme-bg2-hue) var(--theme-bg2-sat) var(--theme-bg2-light)/var(--final-bg-opacity)));
+		}
+	</style>
+</head>
+
+<body>
+	<div id="titlebar">
+		<header>
+			<div class="title">Cadence Limits</div>
+			<div class="filler"></div>
+			<div class="buttons">
+				<a class="button open-settings" href="cadence-range-settings.html?width=480&height=720&child-window"
+					title="Open settings window"
+					target="groups-settings"><ms>settings</ms></a>
+				<div title="Minimize" class="button minimize electron-only">
+					<ms>minimize</ms>
+				</div>
+				<div title="Close this window" class="button close electron-only">
+					<ms>close</ms>
+				</div>
+			</div>
+		</header>
+	</div>
+	<div id="content" onClick="location.reload()">
+		<audio id="cadence-low-sound" src="../pages/sounds/cadence_low.mp3"></audio>
+		<audio id="cadence-high-sound" src="../pages/sounds/cadence_high.mp3"></audio>
+		<audio id="cadence-ok-sound" src="../pages/sounds/cadence_okay.mp3"></audio>
+
+		<div>Cadence Lower Bound: <span id="cadence-lower-bound"></span></div>
+		<div>Cadence Upper Bound: <span id="cadence-upper-bound"></span></div>
+	</div>
+	<div id="hintbar">
+		<div class="hint"></div>
+	</div>
+</body>
+
+</html>
