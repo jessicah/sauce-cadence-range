@@ -4,7 +4,7 @@
     "description": "Audio alerts when cadence drifts out of the target range",
     "author": "Jessica Hamilton",
     "website_url": "https://github.com/jessicah/sauce-cadence-range",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "web_root": "pages",
     "windows": [
         {
